@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-item',
@@ -6,22 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-item.component.css']
 })
 export class UserItemComponent implements OnInit {
-  public name: string;
+  @Input() public name: string;
 
   constructor() {
-    this.setName('Felipe');
+
   }
 
   ngOnInit() {
-  }
 
-  /**
-   * setName
-   */
-  public setName(name: string): void {
-    this.name = name;
   }
-
+  
   /**
    * getName
    */
